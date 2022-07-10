@@ -12,15 +12,18 @@
   body{
     font-family: 'Archivo', sans-serif;
   }
-  div.mlflow{
+.outer_div{
     width: 80%;
   margin: auto;
-  padding: 70px;
+  padding: 40px;
   background-color: white;
   border-radius: 7px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  overflow-x: hidden;
 
   }
+
+
   h1, footer{
   /* padding: 50px; */
   margin-left: 20px;
@@ -42,32 +45,29 @@
   text-align: left;
   outline: none;
   font-size: 15px;
+  margin-top: 10px;
 }
 .content {
   padding: 0 18px;
   max-height: 0;
-  overflow: hidden;
+  overflow: scroll;
   transition: max-height 0.2s ease-out;
   background-color: #f1f1f1;
 }
 
 /* MOBILE RESPONSIVENESS */
 @media screen and (max-width: 400px) {
-    div.mlflow{
-    width: 60%;
+
+.outer_div{
+    width: 80%;
   margin: auto;
-  padding-right: 70px;
-  padding-left: 70px;
+  padding: 20px;
   background-color: white;
   border-radius: 7px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  overflow-x: hidden;
 
   }
-  /* .content .collapsible{
-    justify-content: center;
-    overflow-x: hidden;
-    width: 70%;
-  } */
 }
 </style>
 
@@ -75,6 +75,7 @@
   <h1>
     Machine Learning Notes
   </h1>
+  <div class="outer_div">
   <div class="mlflow">
   <button class="collapsible">
     MLflow
@@ -97,6 +98,25 @@
     </ul>
     </p>
     </div>
+    </div>
+
+    <div class="other_stuff">
+      <button class="collapsible">
+        Some Other Stuff
+      </button>
+      <div class="content">
+        <p>
+          This contains random things I learnt while debugging. <br>
+          It's not topic specific
+  
+        <ul>
+          <li>Use <b>jupyter nbconvert notebook.ipynb --to html --template classic</b> when converting notebook to mobile responsive html</li><br>
+          <li><a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token">Helpful link for GitHub authentication:</a> All you need is to paste the PAT</li>
+        </ul>
+        </p>
+      </div>
+    </div>
+
     </div>
     <footer>
       This material is open to the public for learning and teaching purposes.<br><br>
